@@ -15,16 +15,18 @@ class NSDA(nn.Module):
         
     def forward(self, x):
         with torch.no_grad():
-            mean_values      = F.avg_pool2d(x, self.kernel_size, stride=1, padding=self.padding)
+            mean_values     = F.avg_pool2d(x, self.kernel_size, stride=1, padding=self.padding)
 
-            squared_diff = (x - mean_values).pow(2)
+            squared_diff    = (x - mean_values).pow(2)
 
             variance_values = F.avg_pool2d(squared_diff, self.kernel_size, stride=1, padding=self.padding)
 
             if self.unbiased:
                 variance_values = variance_values * (self.kernel_size[0] * self.kernel_size[1]) / (self.kernel_size[0] * self.kernel_size[1] - 1)
    
-            attention_map = 1 - torch.exp(-squared_diff / (2 * variance_values + 1e-6))
+            attention_map = 1 - torch.exp(-squared_diff / (2 * variance_values + 1e-6)) # Gaussian-kernel-based dissimilarity measure
+            # attention_map = torch.exp(-squared_diff / (2 * variance_values + 1e-6))     # Gaussian kernel for the similarity measure
+            # attention_map = torch.sigmoid(torch.abs(x - mean_values))                   # dissimilarity measure based on Sigmoid-activated Euclidean distance
 
         out = x * attention_map
 
