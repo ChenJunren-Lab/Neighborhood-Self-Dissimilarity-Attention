@@ -23,5 +23,5 @@ We integrate NSDA on four established neural networks for medical image segmenta
 - UNeXt: The code is available at `NSDA-augmented-UNeXt.py`.
 - TinyU-Net: The code is available at `NSDA-augmented-TinyUNet.py`.
 
-## Results
+## Qualitative Results
 ![Qualitative Experimental Results](./assets/Qualitative_Analysis.png "Qualitative results across multi-domain benchmarks. Grad-CAM visualizations of attention-integrated U-Nets for segmenting the pancreas (Synapse), right ventricle (ACDC), and benign tumors (BUSI). Warmer colors (e.g., red) indicate higher attention weights. Segmentation outcomes (even rows) illustrate that our NSDA helps U-Net to delineate ROIs more precisely.")
