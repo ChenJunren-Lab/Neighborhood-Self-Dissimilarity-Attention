@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 
 class NSDA(nn.Module):
-    def __init__(self, in_channels, out_channels, window_size=(31, 31), shortcut=True, unbiased=True):
+    def __init__(self, in_channels, out_channels, window_size=(31, 31), shortcut=True, unbiased=False):
         super(NSDA, self).__init__()
 
         self.kernel_size = window_size
@@ -21,7 +21,7 @@ class NSDA(nn.Module):
 
             variance_values = F.avg_pool2d(squared_diff, self.kernel_size, stride=1, padding=self.padding)
 
-            if self.unbiased:
+            if self.unbiased: # Bessel's correction
                 variance_values = variance_values * (self.kernel_size[0] * self.kernel_size[1]) / (self.kernel_size[0] * self.kernel_size[1] - 1)
    
             attention_map = 1 - torch.exp(-squared_diff / (2 * variance_values + 1e-6)) # Gaussian-kernel-based dissimilarity measure
