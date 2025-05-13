@@ -8,7 +8,8 @@ Overview of our parameter-free Neighborhood Self-Dissimilarity Attention (NSDA).
 See `NSDA.py` for specific usage.
 
 ```python
-import NSDA
+import torch
+from NSDA import NSDA
 
 input      = torch.randn(8, 16, 64, 64)
 b, c, h, w = input.shape
