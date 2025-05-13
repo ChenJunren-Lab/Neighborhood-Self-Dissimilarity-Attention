@@ -13,7 +13,7 @@ output     = attention(input)
 
 See `NSDA.py` for specific usage.
 
-## NSDA-augmented Network
+## NSDA-augmented Networks
 We integrate NSDA on four established neural networks for medical image segmentation:
 - U-Net: The code is available at `NSDA-augmented-UNet.py`.
 - TransUNet: The code is available at `NSDA-augmented-TransUNett.py`. It script requires the following Python files as dependencies: 
