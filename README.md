@@ -16,7 +16,7 @@ b, c, h, w = input.shape
 
 # NSDA withou Dynamic Neighborhood Scaling (DyNS)
 attention  = NSDA(in_channels=c, out_channels=c)
-output     = attention(input)
+output1     = attention(input)
 
 # DyNS-equipped NSDA
 if (h//8)%2==0:
