@@ -45,4 +45,4 @@ Qualitative results across various benchmarks.
 - Odd rows:  Grad-CAM visualizations of attention-integrated U-Nets for segmenting the pancreas (Synapse), right ventricle (ACDC), and benign tumors (BUSI).  Warmer colors (e.g., red) indicate higher attention weights.
 - Even rows: segmentation outcomes of attention-integrated U-Nets. 
 
-Our NSDA helps U-Net to delineate ROIs more precisely.
+Our NSDA helps U-Net to delineate Regions of Interest (ROIs) more precisely.
