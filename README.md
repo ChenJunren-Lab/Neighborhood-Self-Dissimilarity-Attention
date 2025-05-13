@@ -10,8 +10,6 @@ Overview of our parameter-free Neighborhood Self-Dissimilarity Attention (NSDA).
 Compared to traditional sigmoid-based methods, NSDA eliminates sign-induced bias, thereby ensuring equitably weighted contributions from features with opposing polarity.
 
 ## Usage of NSDA
-See `NSDA.py` for specific usage.
-
 ```python
 import torch
 from NSDA import NSDA
@@ -29,6 +27,7 @@ if (h//8)%2 == 0:
 else:
     output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
 ```
+See `NSDA.py` for specific usage.
 
 ## NSDA-augmented Networks
 We integrate NSDA on four established neural networks for medical image segmentation:
