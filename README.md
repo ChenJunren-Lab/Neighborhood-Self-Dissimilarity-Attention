@@ -13,8 +13,16 @@ from NSDA import NSDA
 
 input      = torch.randn(8, 16, 64, 64)
 b, c, h, w = input.shape
+
+# NSDA withou Dynamic Neighborhood Scaling (DyNS)
 attention  = NSDA(in_channels=c, out_channels=c)
 output     = attention(input)
+
+# DyNS-equipped NSDA
+if (h//8)%2==0:
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+1, w//8+1))(input)
+else:
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
 ```
 
 ## NSDA-augmented Networks
