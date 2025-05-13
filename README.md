@@ -5,7 +5,7 @@
 
 ## Usage of NSDA
 ```python
-input      = torch.randn(2, 3, 8, 8)
+input      = torch.randn(8, 16, 64, 64)
 b, c, h, w = input.shape
 attention  = NSDA(in_channels=c, out_channels=c)
 output     = attention(input)
