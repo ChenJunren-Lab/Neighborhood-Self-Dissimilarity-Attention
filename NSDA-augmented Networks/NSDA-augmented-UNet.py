@@ -56,7 +56,8 @@ class UNetEncoder(nn.Module):
         x = self.act(self.conv1(x))
         x = self.act(self.conv2(x))
         # x = self.attention(x)
-        # (Dynamic Neighborhood Scaling) DyNS-equipped NSDA 
+
+        # DyNS-equipped NSDA 
         _,c,h,w = x.shape
         if (h//8)%2==0:
             x = NSDA(c, c, (h//8+1, w//8+1))(x)
@@ -91,7 +92,7 @@ class UNetDecoder(nn.Module):
         x = self.act(self.conv2(x))
         
         # x = self.attention(x)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = x.shape
 
         if (h//8)%2==0:

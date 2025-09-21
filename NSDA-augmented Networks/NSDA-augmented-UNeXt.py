@@ -303,7 +303,7 @@ class UNext(nn.Module):
         ### Stage 1
         out = F.relu(F.max_pool2d(self.ebn1(self.encoder1(x)),2,2))
         # out = self.attentions[0](out)
-        # (Dynamic Neighborhood Scaling) DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
@@ -313,7 +313,7 @@ class UNext(nn.Module):
         ### Stage 2
         out = F.relu(F.max_pool2d(self.ebn2(self.encoder2(out)),2,2))
         # out = self.attentions[1](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
@@ -323,7 +323,7 @@ class UNext(nn.Module):
         ### Stage 3
         out = F.relu(F.max_pool2d(self.ebn3(self.encoder3(out)),2,2))
         # out = self.attentions[2](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
@@ -376,7 +376,7 @@ class UNext(nn.Module):
         
         out = F.relu(F.interpolate(self.dbn3(self.decoder3(out)),scale_factor=(2,2),mode ='bilinear'))
         # out = self.attentions[1](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
@@ -385,7 +385,7 @@ class UNext(nn.Module):
         out = torch.add(out,t2)
         out = F.relu(F.interpolate(self.dbn4(self.decoder4(out)),scale_factor=(2,2),mode ='bilinear'))
         # out = self.attentions[0](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
@@ -394,7 +394,7 @@ class UNext(nn.Module):
         out = torch.add(out,t1)
         out = F.relu(F.interpolate(self.decoder5(out),scale_factor=(2,2),mode ='bilinear'))
         # out = self.attentions[0](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)

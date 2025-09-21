@@ -184,7 +184,7 @@ class ResNetV2(nn.Module):
         for i in range(len(self.body)-1):
             x = self.body[i](x)
             # x = self.attentions[i](x)
-            # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+            # DyNS-equipped NSDA 
             _,c,h,w = x.shape
             if (h//8)%2==0:
                 x = NSDA(self.width*4*(i+1), self.width*4*(i+1),  (h//8+1, w//8+1))(x)
@@ -202,7 +202,7 @@ class ResNetV2(nn.Module):
             features.append(feat)
         x = self.body[-1](x)
         # x = self.attentions[2](x)
-        # (Dynamic Neighborhood Scaling) DyNS-equipped NSDA 
+        # DyNS-equipped NSDA 
         _,c,h,w = x.shape
         if (h//8)%2==0:
             x = NSDA(c, c, (h//8+1, w//8+1))(x)
