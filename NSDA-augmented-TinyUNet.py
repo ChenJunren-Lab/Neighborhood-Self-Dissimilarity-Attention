@@ -109,7 +109,7 @@ class CMRF(nn.Module):
         if (h//8)%2==0:
             y = NSDA(c, c, (h//8+1, w//8+1))(y)
         else:
-            y = NSDA(c, c, (h//8+2, w//8+2))(y)
+            y = NSDA(c, c, (h//8, w//8))(y)
 
         return x_residual + y if self.add else y
 
