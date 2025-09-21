@@ -1,4 +1,5 @@
 # Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Language](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
 🔥 This paper has been accepted at NeurIPS 2025 as a `spotlight` (3% of submissions).  
 
