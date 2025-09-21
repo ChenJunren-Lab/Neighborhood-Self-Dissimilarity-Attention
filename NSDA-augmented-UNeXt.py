@@ -302,7 +302,7 @@ class UNext(nn.Module):
         ### Stage 1
         out = F.relu(F.max_pool2d(self.ebn1(self.encoder1(x)),2,2))
         # out = self.attentions[0](out)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # (Dynamic Neighborhood Scaling) DyNS-equipped NSDA 
         _,c,h,w = out.shape
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
