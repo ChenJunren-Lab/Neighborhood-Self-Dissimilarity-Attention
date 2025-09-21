@@ -104,7 +104,7 @@ class CMRF(nn.Module):
         y          = self.pwconv2(y)
 
         # y = self.attention(y)
-        # (Dynamic Neighborhood Scaling)DyNS-equipped NSDA 
+        # (Dynamic Neighborhood Scaling) DyNS-equipped NSDA 
         _,c,h,w = y.shape
         if (h//8)%2==0:
             y = NSDA(c, c, (h//8+1, w//8+1))(y)
