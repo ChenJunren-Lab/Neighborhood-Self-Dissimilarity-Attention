@@ -37,6 +37,7 @@ MLP_NORM = "LayerNorm_2"
 
 
 class NSDA(nn.Module):
+    # NSDA without Dynamic Neighborhood Scaling (DyNS)
     def __init__(self, in_channels, out_channels, window_size=(31, 31), shortcut=True, unbiased=True):
         super(NSDA, self).__init__()
 
