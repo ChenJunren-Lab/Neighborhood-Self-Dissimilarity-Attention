@@ -31,13 +31,13 @@ See `NSDA.py` for specific usage.
 
 ## NSDA-augmented Networks
 We integrate NSDA on four established neural networks for medical image segmentation:
-- U-Net: The code is available at `NSDA-augmented-UNet.py`.
-- TransUNet: The code is available at `NSDA-augmented-TransUNett.py`. It script requires the following Python files as dependencies: 
+- U-Net: The code is available at `NSDA-augmented Networks/NSDA-augmented-UNet.py`.
+- TransUNet: The code is available at `NSDA-augmented Networks/NSDA-augmented-TransUNett.py`. It script requires the following Python files as dependencies: 
     - vit_seg_configs.py
     - vit_seg_modeling.py       
     - vit_seg_modeling_resnet_skip.py  
-- UNeXt: The code is available at `NSDA-augmented-UNeXt.py`.
-- TinyU-Net: The code is available at `NSDA-augmented-TinyUNet.py`.
+- UNeXt: The code is available at `NSDA-augmented Networks/NSDA-augmented-UNeXt.py`.
+- TinyU-Net: The code is available at `NSDA-augmented Networks/NSDA-augmented-TinyUNet.py`.
 
 ## Qualitative Results
 ![Qualitative Experimental Results](./assets/Qualitative_Analysis.png "")
