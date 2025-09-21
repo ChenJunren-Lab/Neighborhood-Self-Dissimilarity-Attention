@@ -358,7 +358,7 @@ class DecoderBlock(nn.Module):
         if (h//8)%2==0:
             x = NSDA(c, c, (h//8+1, w//8+1))(x)
         else:
-            x = NSDA(c, c, (h//8, w//8))(x)
+            x = NSDA(c, c, (h//8+2, w//8+2))(x)
 
         return x
 

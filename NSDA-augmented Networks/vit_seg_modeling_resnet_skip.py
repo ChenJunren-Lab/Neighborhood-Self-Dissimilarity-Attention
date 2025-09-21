@@ -189,7 +189,7 @@ class ResNetV2(nn.Module):
             if (h//8)%2==0:
                 x = NSDA(self.width*4*(i+1), self.width*4*(i+1),  (h//8+1, w//8+1))(x)
             else:
-                x = NSDA(self.width*4*(i+1), self.width*4*(i+1), (h//8, w//8))(x)
+                x = NSDA(self.width*4*(i+1), self.width*4*(i+1), (h//8+2, w//8+2))(x)
             
             right_size = int(in_size / 4 / (i+1))
             if x.size()[2] != right_size:

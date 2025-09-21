@@ -308,7 +308,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
         t1 = out
         ### Stage 2
         out = F.relu(F.max_pool2d(self.ebn2(self.encoder2(out)),2,2))
@@ -318,7 +318,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
         t2 = out
         ### Stage 3
         out = F.relu(F.max_pool2d(self.ebn3(self.encoder3(out)),2,2))
@@ -328,7 +328,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
         t3 = out
 
         ### Tokenized MLP Stage
@@ -381,7 +381,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
         out = torch.add(out,t2)
         out = F.relu(F.interpolate(self.dbn4(self.decoder4(out)),scale_factor=(2,2),mode ='bilinear'))
         # out = self.attentions[0](out)
@@ -390,7 +390,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
         out = torch.add(out,t1)
         out = F.relu(F.interpolate(self.decoder5(out),scale_factor=(2,2),mode ='bilinear'))
         # out = self.attentions[0](out)
@@ -399,7 +399,7 @@ class UNext(nn.Module):
         if (h//8)%2==0:
             out = NSDA(c, c, (h//8+1, w//8+1))(out)
         else:
-            out = NSDA(c, c, (h//8, w//8))(out)
+            out = NSDA(c, c, (h//8+2, w//8+2))(out)
 
         return self.final(out)
 

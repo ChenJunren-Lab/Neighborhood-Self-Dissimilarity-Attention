@@ -52,6 +52,6 @@ if __name__ == '__main__':
     if (h//8)%2 == 0:
         output2 = NSDA(in_channels=c, out_channels=c,  window_size=(h//8+1, w//8+1))(input)
     else:
-        output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8, w//8))(input)
+        output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
 
     print(f'Shape of the input: {input.shape}\nShape of the output1: {output1.shape}\nShape of the output2: {output2.shape}')
