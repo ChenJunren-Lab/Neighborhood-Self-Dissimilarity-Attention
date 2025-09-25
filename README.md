@@ -1,7 +1,7 @@
 # Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Language](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
-🔥 This paper has been accepted at NeurIPS 2025 as a `spotlight` (3% of submissions).  
+✨ This paper has been accepted at NeurIPS 2025 as a `spotlight` (3% of submissions).  
 
 There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total, with breakdown of 4525 as posters, 688 as spotlight and 77 as oral.
 
