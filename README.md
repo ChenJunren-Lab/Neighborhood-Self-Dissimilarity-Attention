@@ -1,9 +1,33 @@
 # Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Language](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
-✨ This paper has been accepted at NeurIPS 2025 as a `spotlight` (3% of submissions).  
+✨ This paper has been accepted at `NeurIPS 2025` as a `spotlight` (3% of submissions).  
 
 There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total, with breakdown of 4525 as posters, 688 as spotlight and 77 as oral.
+
+🔥 Our [TinyU-Net: Lighter Yet Better U-Net with Cascaded Multi-receptive Fields](https://doi.org/10.1007/978-3-031-72114-4_60) [[Official Implementation](https://doi.org/10.1007/978-3-031-72114-4_60)]  has been published at `MICCAI 2024` as an `ORAL` (2.7% of submissions). 
+
+## BibTex
+```bibtex
+@InProceedings{Chen_TinyUNet_MICCAI2024,
+        author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and Zhang, Lei and Chen, Liangyin},
+        title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
+        year      = {2025},
+        # todo: add booktitle, publisher, volume, month, pages
+}
+
+@InProceedings{Chen_TinyUNet_MICCAI2024,
+        author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Zhang, Lei and Chen, Liangyin},
+        title     = {TinyU-Net: Lighter Yet Better U-Net with Cascaded Multi-receptive Fields},
+        booktitle = {Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024},
+        year      = {2024},
+        publisher = {Springer Nature Switzerland},
+        volume    = {LNCS 15009},
+        month     = {October},
+        pages     = {626--635}
+}
+```
+
 
 ## Methodology
 ![Overview of NSDA](./assets/NSDA.png "")
