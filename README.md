@@ -9,14 +9,14 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
 
 ## BibTex
 ```bibtex
-@InProceedings{Chen_TinyUNet_MICCAI2024,
+@InProceedings{Chen_NSDA_NeurIPS2025Spotlight,
         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and Zhang, Lei and Chen, Liangyin},
         title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
         year      = {2025},
         # todo: add booktitle, publisher, volume, month, pages
 }
 
-@InProceedings{Chen_TinyUNet_MICCAI2024,
+@InProceedings{Chen_TinyUNet_MICCAI2024Oral,
         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Zhang, Lei and Chen, Liangyin},
         title     = {TinyU-Net: Lighter Yet Better U-Net with Cascaded Multi-receptive Fields},
         booktitle = {Medical Image Computing and Computer Assisted Intervention -- MICCAI 2024},
