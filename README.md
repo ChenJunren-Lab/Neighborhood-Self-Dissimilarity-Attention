@@ -28,8 +28,10 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
 }
 ```
 
+## 📌 Abstract
+Automated medical image segmentation based on neural networks is pivotal in promoting digital health equity. The attention mechanism increasingly serves as a key component in modern neural networks, as it enables the network to focus on regions of interest, thus improving the segmentation accuracy in medical images.  However, current attention mechanisms confront an accuracy-complexity trade-off paradox: accuracy gains demand higher computational costs, while reducing complexity sacrifices model accuracy. Such a contradiction inherently restricts real-world deployment for attention mechanisms in resource-limited settings, thus exacerbating healthcare disparities. To overcome this dilemma, we propose parameter-free Neighborhood Self-Dissimilarity Attention (NSDA), inspired by radiologists' diagnostic patterns of prioritizing regions exhibiting substantial differences during clinical image interpretation.  Unlike pairwise-similarity-based self-attention mechanisms, NSDA constructs a size-adaptive local dissimilarity measure that quantifies element-neighborhood differences. By assigning higher attention weights to regions with larger feature differences, NSDA directs the neural network to focus on high-discrepancy regions, thus improving segmentation accuracy without adding trainable parameters directly related to computational complexity.  The experimental results demonstrate the effectiveness and generalization of our method. This study presents a parameter-free attention paradigm, designed with clinical prior knowledge, to improve neural network performance for medical image analysis and contribute to digital health equity in low-resource settings.
 
-## Methodology
+## 🔍 Methodology
 ![Overview of NSDA](./assets/NSDA.png "")
 The overview of our parameter-free Neighborhood Self-Dissimilarity Attention (NSDA).  
 - (a) The illustrating of the NSDA architecture for every element, which uses the proposed Gaussian-kernel-based method to measure element-neighborhood dissimilarity, giving higher weights to elements with more salient differences. 
@@ -58,7 +60,7 @@ else:
 ```
 See `NSDA.py` for specific usage.
 
-## NSDA-augmented Networks
+## 🛠️ NSDA-augmented Networks
 We integrate NSDA on four established neural networks for medical image segmentation:
 - U-Net: The code is available at `NSDA-augmented Networks/NSDA-augmented-UNet.py`.
 - TransUNet: The code is available at `NSDA-augmented Networks/NSDA-augmented-TransUNet/NSDA-augmented-TransUNett.py`. It script requires the following Python files as dependencies: 
