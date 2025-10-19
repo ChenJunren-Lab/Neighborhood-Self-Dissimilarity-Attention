@@ -40,7 +40,7 @@ The overview of our parameter-free Neighborhood Self-Dissimilarity Attention (NS
 
 Compared with traditional sigmoid-based methods, NSDA eliminates sign-induced bias, thereby ensuring equitably weighted contributions from features with opposing polarity.
 
-## Usage of NSDA
+## 🛠️ Usage of NSDA
 ```python
 import torch
 from NSDA import NSDA
@@ -60,7 +60,7 @@ else:
 ```
 See `NSDA.py` for specific usage.
 
-## 🛠️ NSDA-augmented Networks
+### 🛠️ NSDA-augmented Networks
 We integrate NSDA on four established neural networks for medical image segmentation:
 - U-Net: The code is available at `NSDA-augmented Networks/NSDA-augmented-UNet.py`.
 - TransUNet: The code is available at `NSDA-augmented Networks/NSDA-augmented-TransUNet/NSDA-augmented-TransUNett.py`. It script requires the following Python files as dependencies: 
@@ -70,7 +70,7 @@ We integrate NSDA on four established neural networks for medical image segmenta
 - UNeXt: The code is available at `NSDA-augmented Networks/NSDA-augmented-UNeXt.py`.
 - TinyU-Net: The code is available at `NSDA-augmented Networks/NSDA-augmented-TinyUNet.py`.
 
-## Qualitative Results
+## 🖼 Qualitative Results
 ![Qualitative Experimental Results](./assets/Qualitative_Analysis.png "")
 Qualitative results across various benchmarks. 
 - Odd rows:  Grad-CAM visualizations of attention-integrated U-Nets for segmenting the pancreas (Synapse), right ventricle (ACDC), and benign tumors (BUSI).  Warmer colors (e.g., red) indicate higher attention weights.
