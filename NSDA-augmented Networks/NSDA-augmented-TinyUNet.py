@@ -107,10 +107,11 @@ class CMRF(nn.Module):
         # y = self.attention(y)
         # DyNS-equipped NSDA 
         _,c,h,w = y.shape
-        if (h//8)%2==0:
-            y = NSDA(c, c, (h//8+1, w//8+1))(y)
+        scale_factor = 8
+        if (h//scale_factor)%2==0:
+            y = NSDA(c, c, (h//scale_factor+1, w//scale_factor+1))(y)
         else:
-            y = NSDA(c, c, (h//8+2, w//8+2))(y)
+            y = NSDA(c, c, (h//scale_factor+2, w//scale_factor+2))(y)
 
         return x_residual + y if self.add else y
 
