@@ -28,7 +28,7 @@ class NSDA(nn.Module):
             attention_map = 1 - torch.exp(-squared_diff / (2 * variance_values + 1e-6)) # Gaussian-kernel-based dissimilarity measure
             '''
             # attention_map = torch.exp(-squared_diff / (2 * variance_values + 1e-6))   # Gaussian kernel for the similarity measure
-            # attention_map = torch.sigmoid(torch.abs(x - mean_values))                 # dissimilarity measure based on Sigmoid-activated Euclidean distance
+            # attention_map = torch.sigmoid(torch.abs(x - mean_values))                 # dissimilarity measure based on sigmoid-activated Euclidean distance
             '''
 
         out = x * attention_map
