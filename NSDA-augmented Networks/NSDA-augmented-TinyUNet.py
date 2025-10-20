@@ -197,5 +197,5 @@ if __name__ == '__main__':
     #-------------------------------------------------------------------------------#
     flops         = flops * 2
     flops, params = clever_format([flops, params], "%.4f")
-    print(f'Total GFLOPs/MACs: {flops}')
+    print(f'Total FLOPs: {flops}')
     print(f'Total Params: {params}')
