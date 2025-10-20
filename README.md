@@ -55,9 +55,9 @@ output1    = attention(input)
 # DyNS-equipped NSDA
 scale_factor = 8
 if (h//scale_factor)%2 == 0:
-    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+1, w//8+1))(input)
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 1, w//scale_factor + 1))(input)
 else:
-    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 2, w//scale_factor + 2))(input)
 ```
 See `NSDA.py` for specific usage.
 
