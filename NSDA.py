@@ -28,7 +28,7 @@ class NSDA(nn.Module):
             attention_map = 1 - torch.exp(-squared_diff / (2 * variance_values + 1e-6)) # Gaussian-kernel-based dissimilarity measure
             '''
             # attention_map = torch.exp(-squared_diff / (2 * variance_values + 1e-6))   # Gaussian kernel for the similarity measure
-            # attention_map = torch.sigmoid(torch.abs(x - mean_values))                 # dissimilarity measure based on Sigmoid-activated Euclidean distance
+            # attention_map = torch.sigmoid(torch.abs(x - mean_values))                 # dissimilarity measure based on sigmoid-activated Euclidean distance
             '''
 
         out = x * attention_map
@@ -48,10 +48,11 @@ if __name__ == '__main__':
     attention = NSDA(in_channels=c, out_channels=c)
     output1 = attention(input)
 
-    # DyNS-equipped NSDA 
-    if (h//8)%2 == 0:
-        output2 = NSDA(in_channels=c, out_channels=c,  window_size=(h//8+1, w//8+1))(input)
+    # DyNS-equipped NSDA
+    scale_factor = 8
+    if (h//scale_factor)%2 == 0:
+        output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 1, w//scale_factor + 1))(input)
     else:
-        output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
+        output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 2, w//scale_factor + 2))(input)
 
     print(f'Shape of the input: {input.shape}\nShape of the output1: {output1.shape}\nShape of the output2: {output2.shape}')

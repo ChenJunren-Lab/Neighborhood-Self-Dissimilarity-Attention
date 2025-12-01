@@ -59,10 +59,11 @@ class UNetEncoder(nn.Module):
 
         # DyNS-equipped NSDA 
         _,c,h,w = x.shape
-        if (h//8)%2==0:
-            x = NSDA(c, c, (h//8+1, w//8+1))(x)
+        scale_factor = 8
+        if (h//scale_factor)%2==0:
+            x = NSDA(c, c, (h//scale_factor + 1, w//scale_factor + 1))(x)
         else:
-            x = NSDA(c, c, (h//8+2, w//8+2))(x)
+            x = NSDA(c, c, (h//scale_factor + 2, w//scale_factor + 2))(x)
 
         
         skip_connection = x
@@ -94,11 +95,11 @@ class UNetDecoder(nn.Module):
         # x = self.attention(x)
         # DyNS-equipped NSDA 
         _,c,h,w = x.shape
-
-        if (h//8)%2==0:
-            x = NSDA(c, c, (h//8+1, w//8+1))(x)
+        scale_factor = 8
+        if (h//scale_factor)%2==0:
+            x = NSDA(c, c, (h//scale_factor + 1, w//scale_factor + 1))(x)
         else:
-            x = NSDA(c, c, (h//8+2, w//8+2))(x)
+            x = NSDA(c, c, (h//scale_factor + 2, w//scale_factor + 2))(x)
         
         return x
 

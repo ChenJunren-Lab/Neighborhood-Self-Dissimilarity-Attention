@@ -29,7 +29,7 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
 ```
 
 ## 📌 Abstract
-Automated medical image segmentation based on neural networks is pivotal in promoting digital health equity. The attention mechanism increasingly serves as a key component in modern neural networks, as it enables the network to focus on regions of interest, thus improving the segmentation accuracy in medical images.  However, current attention mechanisms confront an accuracy-complexity trade-off paradox: accuracy gains demand higher computational costs, while reducing complexity sacrifices model accuracy. Such a contradiction inherently restricts real-world deployment for attention mechanisms in resource-limited settings, thus exacerbating healthcare disparities. To overcome this dilemma, we propose parameter-free Neighborhood Self-Dissimilarity Attention (NSDA), inspired by radiologists' diagnostic patterns of prioritizing regions exhibiting substantial differences during clinical image interpretation.  Unlike pairwise-similarity-based self-attention mechanisms, NSDA constructs a size-adaptive local dissimilarity measure that quantifies element-neighborhood differences. By assigning higher attention weights to regions with larger feature differences, NSDA directs the neural network to focus on high-discrepancy regions, thus improving segmentation accuracy without adding trainable parameters directly related to computational complexity.  The experimental results demonstrate the effectiveness and generalization of our method. This study presents a parameter-free attention paradigm, designed with clinical prior knowledge, to improve neural network performance for medical image analysis and contribute to digital health equity in low-resource settings.
+Medical image segmentation based on neural networks is pivotal in promoting digital health equity. The attention mechanism increasingly serves as a key component in modern neural networks, as it enables the network to focus on regions of interest, thus improving the segmentation accuracy in medical images. However, current attention mechanisms confront an accuracy-complexity trade-off paradox: accuracy gains demand higher computational costs, while reducing complexity sacrifices model accuracy. Such a contradiction inherently restricts the real-world deployment of attention mechanisms in resource-limited settings, thus exacerbating healthcare disparities. To overcome this dilemma, we propose parameter-free Neighborhood Self-Dissimilarity Attention (NSDA), inspired by radiologists' diagnostic patterns of prioritizing regions exhibiting substantial differences during clinical image interpretation. Unlike pairwise-similarity-based self-attention mechanisms, NSDA constructs a size-adaptive local dissimilarity measure that quantifies element-neighborhood differences. By assigning higher attention weights to regions with larger feature differences, NSDA directs the neural network to focus on high-discrepancy regions, thus improving segmentation accuracy without adding trainable parameters directly related to computational complexity. The experimental results demonstrate the effectiveness and generalization of our method. This study presents a parameter-free attention paradigm, designed with clinical prior knowledge, to improve neural network performance for medical image analysis and contribute to digital health equity in low-resource settings.
 
 ## 🔍 Methodology
 ![Overview of NSDA](./assets/NSDA.png "")
@@ -53,10 +53,11 @@ attention  = NSDA(in_channels=c, out_channels=c)
 output1    = attention(input)
 
 # DyNS-equipped NSDA
-if (h//8)%2 == 0:
-    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+1, w//8+1))(input)
+scale_factor = 8
+if (h//scale_factor)%2 == 0:
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 1, w//scale_factor + 1))(input)
 else:
-    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//8+2, w//8+2))(input)
+    output2 = NSDA(in_channels=c, out_channels=c, window_size=(h//scale_factor + 2, w//scale_factor + 2))(input)
 ```
 See `NSDA.py` for specific usage.
 
