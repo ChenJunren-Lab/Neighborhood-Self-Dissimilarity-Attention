@@ -13,7 +13,9 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and Zhang, Lei and Chen, Liangyin},
         title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
         year      = {2025},
-        # todo: add booktitle, publisher, volume, month, pages
+        booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+        # todo: add publisher, volume, month, pages
+}
 }
 
 @InProceedings{Chen_TinyUNet_MICCAI2024Oral,
