@@ -16,7 +16,6 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
         booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems}
         # todo: add publisher, volume, month, pages
 }
-}
 
 @InProceedings{Chen_TinyUNet_MICCAI2024Oral,
         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Zhang, Lei and Chen, Liangyin},
