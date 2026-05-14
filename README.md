@@ -10,17 +10,16 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
 ## BibTex
 ```bibtex
 @inproceedings{Chen_NSDA_NeurIPS2025Spotlight,
- author = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and zhanglei-scu and Chen, Liangyin},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {D. Belgrave and C. Zhang and H. Lin and R. Pascanu and P. Koniusz and M. Ghassemi and N. Chen},
- pages = {38165--38185},
- publisher = {Curran Associates, Inc.},
- title = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
- url = {https://proceedings.neurips.cc/paper_files/paper/2025/file/36b80eae70ff629d667f210e13497edf-Paper-Conference.pdf},
- volume = {38},
- year = {2025}
+         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and zhanglei-scu and Chen, Liangyin},
+         booktitle = {Advances in Neural Information Processing Systems},
+         editor    = {D. Belgrave and C. Zhang and H. Lin and R. Pascanu and P. Koniusz and M. Ghassemi and N. Chen},
+         pages     = {38165--38185},
+         publisher = {Curran Associates, Inc.},
+         title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
+         url       = {https://proceedings.neurips.cc/paper_files/paper/2025/file/36b80eae70ff629d667f210e13497edf-Paper-Conference.pdf},
+         volume    = {38},
+         year      = {2025}
 }
-
 
 @InProceedings{Chen_TinyUNet_MICCAI2024Oral,
         title     = {TinyU-Net: Lighter Yet Better U-Net with Cascaded Multi-receptive Fields},
@@ -31,6 +30,18 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
         volume    = {LNCS 15009},
         month     = {October},
         pages     = {626--635}
+}
+
+@article{Chen_PLDet,
+        title     = {PLDet: Intra-layer Multi-scale Perception and Local Space Attention for Pulmonary Lesion Detection in CT Images},
+        author    = {Junren Chen and Wei Wang and Junlong Cheng and Gang Liang and Lei Zhang and Liangyin Chen},
+        journal   = {Biomedical Signal Processing and Control},
+        volume    = {120},
+        pages     = {110087},
+        year      = {2026},
+        issn      = {1746-8094},
+        doi       = {https://doi.org/10.1016/j.bspc.2026.110087},
+        url       = {https://www.sciencedirect.com/science/article/pii/S1746809426006415},
 }
 ```
 
