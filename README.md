@@ -1,7 +1,9 @@
 # Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Language](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
-✨ Our [Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/36b80eae70ff629d667f210e13497edf-Abstract-Conference.html) [[Official Implementation](https://github.com/ChenJunren-Lab/Neighborhood-Self-Dissimilarity-Attention)] has been accepted at `NeurIPS 2025` as a `Spotlight` (3% of valid submissions).  
+Official implementation of the `MICCAI 2024 Oral` paper "[Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/36b80eae70ff629d667f210e13497edf-Abstract-Conference.html)".
+
+✨ This paper  has been published at `NeurIPS 2025` as a `Spotlight` (3% of valid submissions).
 
 There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total, with breakdown of 4525 as posters, 688 as spotlight and 77 as oral.
 
