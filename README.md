@@ -1,7 +1,9 @@
 # Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Language](https://img.shields.io/static/v1?label=By&message=Pytorch&color=red)
 
-✨ This paper has been accepted at `NeurIPS 2025` as a `Spotlight` (3% of submissions).  
+Official implementation of the `NeurIPS 2025 Spotlight` paper "[Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation](https://proceedings.neurips.cc/paper_files/paper/2025/hash/36b80eae70ff629d667f210e13497edf-Abstract-Conference.html)".
+
+✨ This paper  has been published at `NeurIPS 2025` as a `Spotlight` (3% of valid submissions).
 
 There were 21575 valid paper submissions to the NeurIPS Main Track this year, of which the program committee accepted 5290 (24.52%) papers in total, with breakdown of 4525 as posters, 688 as spotlight and 77 as oral.
 
@@ -9,12 +11,16 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
 
 ## BibTex
 ```bibtex
-@InProceedings{Chen_NSDA_NeurIPS2025Spotlight,
-        title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
-        author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and Zhang, Lei and Chen, Liangyin},
-        year      = {2025},
-        booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems}
-        # todo: add publisher, volume, month, pages
+@inproceedings{Chen_NSDA_NeurIPS2025Spotlight,
+         author    = {Chen, Junren and Chen, Rui and Wang, Wei and Cheng, Junlong and Liang, Gang and zhanglei-scu and Chen, Liangyin},
+         booktitle = {Advances in Neural Information Processing Systems},
+         editor    = {D. Belgrave and C. Zhang and H. Lin and R. Pascanu and P. Koniusz and M. Ghassemi and N. Chen},
+         pages     = {38165--38185},
+         publisher = {Curran Associates, Inc.},
+         title     = {Neighborhood Self-Dissimilarity Attention for Medical Image Segmentation},
+         url       = {https://proceedings.neurips.cc/paper_files/paper/2025/file/36b80eae70ff629d667f210e13497edf-Paper-Conference.pdf},
+         volume    = {38},
+         year      = {2025}
 }
 
 @InProceedings{Chen_TinyUNet_MICCAI2024Oral,
@@ -26,6 +32,18 @@ There were 21575 valid paper submissions to the NeurIPS Main Track this year, of
         volume    = {LNCS 15009},
         month     = {October},
         pages     = {626--635}
+}
+
+@article{Chen_PLDet,
+        title     = {PLDet: Intra-layer Multi-scale Perception and Local Space Attention for Pulmonary Lesion Detection in CT Images},
+        author    = {Junren Chen and Wei Wang and Junlong Cheng and Gang Liang and Lei Zhang and Liangyin Chen},
+        journal   = {Biomedical Signal Processing and Control},
+        volume    = {120},
+        pages     = {110087},
+        year      = {2026},
+        issn      = {1746-8094},
+        doi       = {https://doi.org/10.1016/j.bspc.2026.110087},
+        url       = {https://www.sciencedirect.com/science/article/pii/S1746809426006415},
 }
 ```
 
